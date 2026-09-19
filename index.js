@@ -92,7 +92,7 @@ app.command("/slackernot-geekout", async ({ ack, respond }) => {
   await ack();
 
   try {
-    const response = await axios.get("https://geek-jokes.sameerkumar.website/api?format=json");
+    const response = await axios.get("https://geek-jokes.sameerkumar.website/api");
     await respond({ text: `Geek Joke:\n${response.data.joke}` });
   } catch (err) {
     await respond({ text: "Failed to fetch a geek joke." });
