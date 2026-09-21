@@ -30,7 +30,8 @@ app.command("/slackernot-help", async ({ ack, respond }) => {
 /slackernot-catfact - Get a cat fact
 /slackernot-dadjoke - Get a dad joke
 /slackernot-duck - Get a random duck image
-/slackernot-joke - Get a random joke`,
+/slackernot-joke - Get a random joke
+/slackernot-geekout - Get a random geek joke`,
   });
 });
 
@@ -64,8 +65,22 @@ app.command("/slackernot-duck", async ({ ack, respond }) => {
   await ack();
 
   try {
-    const response = await axios.get("https://random-d.uk");
-    await respond({ text: `Duck Image:\n${response.data.url}` });
+    const response = await axios.get("https://random-d.uk/api/random");
+    await respond({
+      text: `Duck Image:\n${response.data.url}`,
+      blocks: [
+        {
+          type: "image",
+          title: {
+            type: "plain_text",
+            text: "Here's your duck image!",
+          },
+          block_id: "image4",
+          image_url: response.data.url,
+          alt_text: "Random Duck Image",
+        },
+      ],
+    });
   } catch (err) {
     await respond({ text: "Failed to fetch a duck image." });
   }
@@ -77,16 +92,11 @@ app.command("/slackernot-joke", async ({ ack, respond }) => {
   try {
     const response = await axios.get("https://official-joke-api.appspot.com/random_joke");
     await respond({
-      text:
-`${response.data.setup}
-
-${response.data.punchline}`
-    });
+      text: `${response.data.setup} ${response.data.punchline}` });
   } catch (err) {
     await respond({ text: "Failed to fetch a joke." });
   }
-}
-);
+});
 
 app.command("/slackernot-geekout", async ({ ack, respond }) => {
   await ack();
