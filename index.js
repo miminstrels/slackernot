@@ -26,6 +26,7 @@ app.command("/slackernot-help", async ({ ack, respond }) => {
   await respond({
     text:
 `Available Commands:
+/slackernot-help - Check available commands
 /slackernot-ping - Check bot latency
 /slackernot-catfact - Get a cat fact
 /slackernot-dadjoke - Get a dad joke
