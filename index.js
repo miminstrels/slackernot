@@ -32,7 +32,7 @@ app.command("/slackernot-help", async ({ ack, respond }) => {
 /slackernot-dadjoke - Get a dad joke
 /slackernot-duck - Get a random duck image
 /slackernot-joke - Get a random joke
-/slackernot-geekout - Get a random geek joke`,
+/slackernot-fox - Get a random fox image`,
   });
 });
 
@@ -99,13 +99,26 @@ app.command("/slackernot-joke", async ({ ack, respond }) => {
   }
 });
 
-app.command("/slackernot-geekout", async ({ ack, respond }) => {
+app.command("/slackernot-fox", async ({ ack, respond }) => {
   await ack();
-
   try {
-    const response = await axios.get("https://geek-jokes.sameerkumar.website/api");
-    await respond({ text: `Geek Joke:\n${response.data.joke}` });
+    const response = await axios.get("https://randomfox.ca/floof/");
+    await respond({
+      text: `Fox Image:\n${response.data.url}`,
+      blocks: [
+        {
+          type: "image",
+          title: {
+            type: "plain_text",
+            text: "Here's your fox image!",
+          },
+          block_id: "image4",
+          image_url: response.data.url,
+          alt_text: "Random Fox Image",
+        },
+      ],
+    });
   } catch (err) {
-    await respond({ text: "Failed to fetch a geek joke." });
+    await respond({ text: "Failed to fetch a fox image." });
   }
 });
