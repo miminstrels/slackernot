@@ -1,4 +1,4 @@
-#slackernot!
+# slackernot!
 
 ## Overview
 Hellooo I'm kinda new to this and this slack bot was for stardance.. 
