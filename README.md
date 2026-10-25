@@ -10,8 +10,8 @@ Commands include:
 - /slackernot-ping (checks bot latency)
 - /slackernot-catfact (for a cat fact)
 - /slackernot-dadjoke (for a dad joke)
+- /slackernot-joke - (for a random regular joke)
 - /slackernot-duck - (gets a random duck image)
-- /slackernot-joke - (gets a random regular joke)
 - /slackernot-fox - (gets a random fox image)
 
 The demo URL is here:
