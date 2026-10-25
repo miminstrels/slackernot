@@ -14,4 +14,4 @@ Commands include:
 - /slackernot-duck - (gets a random duck image)
 - /slackernot-fox - (gets a random fox image)
 
-The demo URL is here:
+The demo URL is here: https://hackclub.enterprise.slack.com/archives/C0CBHD51QBH
