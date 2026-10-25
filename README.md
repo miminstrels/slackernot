@@ -2,8 +2,8 @@
 
 ## Overview
 Hellooo I'm kinda new to this and this slack bot was for stardance.. 
-not an ideal time to submit this but that's because i've been quite busy with school and all,
-so i think this'll be REALLY buggy but either way have fun!
+not an ideal time to submit this but that's because i've been quite busy with school and all, my bad..
+this really is just a random slackbot filled with jokes, and certain random animal images.
 
 ## Commands
 Commands include:
