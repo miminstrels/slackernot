@@ -104,7 +104,7 @@ app.command("/slackernot-fox", async ({ ack, respond }) => {
   try {
     const response = await axios.get("https://randomfox.ca/floof/");
     await respond({
-      text: `Fox Image:\n${response.data.url}`,
+      text: `Fox Image:\n${response.data.image}`,
       blocks: [
         {
           type: "image",
@@ -113,7 +113,7 @@ app.command("/slackernot-fox", async ({ ack, respond }) => {
             text: "Here's your fox image!",
           },
           block_id: "image4",
-          image_url: response.data.url,
+          image_url: response.data.image,
           alt_text: "Random Fox Image",
         },
       ],
