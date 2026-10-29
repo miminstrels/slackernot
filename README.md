@@ -13,5 +13,6 @@ Commands include:
 - /slackernot-joke - (for a random regular joke)
 - /slackernot-duck - (gets a random duck image)
 - /slackernot-fox - (gets a random fox image)
+- /slackernot-dogfact - (gets a random dog fact)
 
 The demo URL is here: https://hackclub.enterprise.slack.com/archives/C0CBHD51QBH
